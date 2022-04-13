@@ -1,0 +1,2 @@
+ lifeSupportRating←{((ox rate)×co2 rate)⍵}
+ ⍝ Tacit form: (ox rate)×co2 rate

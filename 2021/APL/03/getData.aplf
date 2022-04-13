@@ -1,0 +1,1 @@
+ getData←{'1'=↑,⎕CSV((⊃1⎕NPARTS⎕WSID),⍵,'.txt')''(1)}

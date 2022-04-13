@@ -1,0 +1,1 @@
+ getData←{(⎕CSV⍠'Separator' ' ')((⊃1⎕NPARTS⎕WSID),⍵,'.txt')''(1 2)}

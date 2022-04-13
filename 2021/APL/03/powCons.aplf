@@ -1,0 +1,1 @@
+ powCons←{(2⊥epsilon ⍵)×2⊥gamma ⍵}
