@@ -1,0 +1,1 @@
+ getCalls←{,(⎕CSV⍠'Records' 1)(basePath,'testdata.txt')''(2)}
