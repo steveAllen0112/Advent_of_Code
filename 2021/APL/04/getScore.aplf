@@ -1,0 +1,1 @@
+ getScore←{winners←⍺∘doCall¨,\⍵ ⋄ (l t b)←∊getWinner winners ⋄ c←⍵[⍳l] ⋄ w←+/c~⍨,⊃⍺[b] ⋄ w×⊃⌽c}

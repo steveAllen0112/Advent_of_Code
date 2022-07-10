@@ -1,0 +1,1 @@
+ doCall←{wins←⍺ getWinningBoards ⍵ ⋄ 1∊wins:⊃⍸wins ⋄ ''}
