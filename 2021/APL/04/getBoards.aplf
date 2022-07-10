@@ -1,1 +1,1 @@
- getBoards←{{⍵⍴⍨⌽5 5,5÷⍨≢⍵}⍎¨(⎕CSV⍠boardVariants)↓↓{⍵⌿⍨' '≠⊢/⍵}↑⊃⎕NGET(basePath,⍵,'_boards.txt')1}
+ getBoards←{{⍵⍴⍨⌽5 5,5÷⍨≢⍵}⍎¨(⎕CSV⍠('Widths'(2,⍨4⍴3)))↓↓{⍵⌿⍨' '≠⊢/⍵}↑⊃⎕NGET((⊃1 ⎕NPARTS ⎕WSID),⍵,'_boards.txt')1}
