@@ -1,1 +1,1 @@
- getBoards←{↑1↓⍵⊆⍨⍵≠⎕UCS 10}
+ getBoards←{{⍵⍴⍨⌽5 5,5÷⍨≢⍵}⍎¨(⎕CSV⍠boardVariants)↓↓{⍵⌿⍨' '≠⊢/⍵}↑⊃⎕NGET(basePath,⍵,'_boards.txt')1}
