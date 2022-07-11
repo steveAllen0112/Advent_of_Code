@@ -1,0 +1,1 @@
+ getScore←{c←⍵[⍳⊃(iC b)←1⌷wins←⍺(⍺⍺ getCallWins ⍵⍵)⍵] ⋄ (⊃⌽c)×+/c~⍨,⊃⍺[b]}

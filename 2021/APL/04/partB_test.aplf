@@ -1,0 +1,1 @@
+ partB_test←{(getBoards(winCheck getScore squidWin)getCalls)'testdata'}

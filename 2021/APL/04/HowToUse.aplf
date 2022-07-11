@@ -1,0 +1,13 @@
+HowToUse←{⍵
+
+⍝ winCheck is a function that must be passed as the left argument to getScore
+⍝ squidWin and squidLose are functions that must be passed as the right argument to getScore
+⍝ getScore is a custom operator, and it takes the boards and calls as its left and right functions, respectively
+⍝ getBoards and getCalls both receive one right argument, and it's either 'testdata' or 'input'
+⍝   → NB: These assume that the files will be 'testdata_calls.txt', 'testdata_boards.txt',
+⍝         'input_calls.txt', and 'input_boards.txt'
+⍝         where each of these files is what it sounds like.
+⍝         The AoC puts out one file, so that file will need to be split into to manually.
+⍝         Note that the boards file should not have a blank line at the top, but should
+⍝         start on the 3rd line of the AoC output, where the first board starts.
+}

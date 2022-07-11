@@ -1,1 +1,0 @@
- getWinningBoards←{winTypes∊⍨winTypes∘.∧∨⌿↑⍺∘=¨⍵}

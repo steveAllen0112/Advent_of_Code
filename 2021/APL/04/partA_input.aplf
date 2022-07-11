@@ -1,0 +1,1 @@
+ partA_input←{(getBoards(winCheck getScore squidLose)getCalls)'input'}

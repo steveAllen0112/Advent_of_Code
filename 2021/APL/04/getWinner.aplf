@@ -1,1 +1,0 @@
- getWinner←{winBoardNumber←⊃⍸1 1⍸⍵ ⋄ winBoardNumber(⊃⍵[winBoardNumber])}
