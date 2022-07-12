@@ -3,21 +3,27 @@
      accept←⍺⍺
      rawText←⊃⎕NGET((⊃1 ⎕NPARTS ⎕WSID),inputType,'.txt')1
      clean←{↑(~⍵∊' ->')⊆⍵}
-     convert←{1+⎕CSV(,⍵,⎕UCS 10)'S' 3}
+     convert←{⎕IO+⎕CSV(,⍵,⎕UCS 10)'S' 3}
      lines←accept convert∘clean¨rawText
      dims←⌽⌈⌿⊃,[1]⌿lines
      tmpls←(dims⍴0)(0⍴⍨⌽dims)
 
      render←{
-         changedAxis←⍸≠⌿⍵
-         2=≢changedAxis:renderD ⍵
-         (c1 c2)←v←{⍵[⍋⍵]}⊣/⍵⌽⍨changedAxis-1
-         line←dims[changedAxis]↑⊃{⍺(1+⍵-⍺)/0 1}/⌽c2 c1-1
-         (⍉⍣(⊃2|changedAxis))(-⊃changedAxis⌽⍵)⌽⌽line,1(↓⍤1)⊃tmpls[changedAxis]
+        2=≢changedAxis←⍸≠⌿⍵:dims renderD ⍵
+
+        (c1 c2)←v←{⍵[⍋⍵]}⊣/⍵⌽⍨changedAxis-1
+        line←dims[changedAxis]↑⊃{⍺(1+⍵-⍺)/0 1}/⌽c2 c1-1
+        (⍉⍣(⊃2|changedAxis))(-⊃changedAxis⌽⍵)⌽⌽line,1(↓⍤1)⊃tmpls[changedAxis]
      }
 
      renderD←{
-         ⊃tmpls
+         m←(⊖⍣(≠/-⌿⍵))∘.=⍨⍳1+⌈/|-⌿⍵
+         l←0⍴⍨(⊃⍴m),1-⍨⌊/⊣/⍵
+         r←0⍴⍨(⊃⍴m),(⊃⍺)-⌈/⊣/⍵
+         m←l,m,r
+         t←0⍴⍨(1-⍨⌊/⊢/⍵)(⊃⌽⍴m)
+         b←0⍴⍨((⊃⌽⍺)-⌈/⊢/⍵)(⊃⌽⍴m)
+         t⍪m⍪b
      }
 
      ≢⍸2≤⊃+/render¨lines
