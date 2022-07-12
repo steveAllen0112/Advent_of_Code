@@ -1,4 +1,4 @@
- sol←{
+ Count←{
      inputType←⍵
      accept←⍺⍺
      rawText←⊃⎕NGET((⊃1 ⎕NPARTS ⎕WSID),inputType,'.txt')1
@@ -9,11 +9,11 @@
      tmpls←(dims⍴0)(0⍴⍨⌽dims)
 
      render←{
-        2=≢changedAxis←⍸≠⌿⍵:dims renderD ⍵
+         2=≢changedAxis←⍸≠⌿⍵:dims renderD ⍵
 
-        (c1 c2)←v←{⍵[⍋⍵]}⊣/⍵⌽⍨changedAxis-1
-        line←dims[changedAxis]↑⊃{⍺(1+⍵-⍺)/0 1}/⌽c2 c1-1
-        (⍉⍣(⊃2|changedAxis))(-⊃changedAxis⌽⍵)⌽⌽line,1(↓⍤1)⊃tmpls[changedAxis]
+         (c1 c2)←v←{⍵[⍋⍵]}⊣/⍵⌽⍨changedAxis-1
+         line←dims[changedAxis]↑⊃{⍺(1+⍵-⍺)/0 1}/⌽c2 c1-1
+         (⍉⍣(⊃2|changedAxis))(-⊃changedAxis⌽⍵)⌽⌽line,1(↓⍤1)⊃tmpls[changedAxis]
      }
 
      renderD←{
