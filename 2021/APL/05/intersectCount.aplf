@@ -1,1 +1,0 @@
- intersectCount←{≢⍸2≤⊃+⌿(dims ⍵)∘renderLine¨⍵}
