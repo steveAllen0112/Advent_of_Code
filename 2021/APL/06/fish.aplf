@@ -1,0 +1,1 @@
+ fish←{⊃¨(⎕CSV⍠('Invert' 1))((⊃1 ⎕NPARTS ⎕WSID),⍵,'.csv')'' 2}
