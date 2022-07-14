@@ -3,15 +3,15 @@
     
 
     segs←'abcefg' 'cf' 'acdeg' 'acdfg' 'bcdf' 'abdfg' 'abdefg' 'acf' 'abcdefg' 'abcdfg'
-    segMap←{(⍵-⎕IO),≢⊃⍺}⌸segs
+    segMap←{≢⊃⍺}⌸segs
     
     :Namespace    PartA 
         input←##.input'test'
-        outs←↑{,≢¨⍵}¨{(⎕CSV⍠('Separator' ' ')),(⊂⍵),'S'1}¨⊢/input
-        ⎕←outs
+        outs←↑(≢¨≠∘' '⊆⊢)¨⊢/input
     :EndNamespace       
 
     :Namespace    PartB
     :EndNamespace
 :EndNamespace
+
 
