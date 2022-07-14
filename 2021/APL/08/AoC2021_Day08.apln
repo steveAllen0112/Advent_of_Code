@@ -1,11 +1,14 @@
 :Namespace AoC2021_Day08
-    input←{⊃⎕NGET((⊃1 ⎕NPARTS ⎕WSID),⍵,'.txt')}
+    input←{(⎕CSV⍠('Separator' '|'))((⊃1 ⎕NPARTS ⎕WSID),⍵,'.txt')''1}
     
+
     segs←'abcefg' 'cf' 'acdeg' 'acdfg' 'bcdf' 'abdfg' 'abdefg' 'acf' 'abcdefg' 'abcdfg'
     segMap←{(⍵-⎕IO),≢⊃⍺}⌸segs
-
+    
     :Namespace    PartA 
-        
+        input←##.input'test'
+        outs←↑{,≢¨⍵}¨{(⎕CSV⍠('Separator' ' ')),(⊂⍵),'S'1}¨⊢/input
+        ⎕←outs
     :EndNamespace       
 
     :Namespace    PartB
