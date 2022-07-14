@@ -1,0 +1,14 @@
+:Namespace AoC2021_Day08
+    input←{⊃⎕NGET((⊃1 ⎕NPARTS ⎕WSID),⍵,'.txt')}
+    
+    segs←'abcefg' 'cf' 'acdeg' 'acdfg' 'bcdf' 'abdfg' 'abdefg' 'acf' 'abcdefg' 'abcdfg'
+    segMap←{(⍵-⎕IO),≢⊃⍺}⌸segs
+
+    :Namespace    PartA 
+        
+    :EndNamespace       
+
+    :Namespace    PartB
+    :EndNamespace
+:EndNamespace
+
