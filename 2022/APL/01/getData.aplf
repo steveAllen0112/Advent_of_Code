@@ -1,0 +1,1 @@
+ getData←{⊃⎕NGET(⊃1 ⎕NPARTS ⎕WSID),⍵,'.txt'}
