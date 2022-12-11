@@ -1,0 +1,82 @@
+[
+	{
+		"id": 0,
+		"items": [83,62,93],
+		"op": "×∘17",
+		"test": {
+			"condition": 2,
+			"true": 1,
+			"false": 6
+		}
+	},
+	{
+		"id": 1,
+		"items": [90,55],
+		"op": "+∘1",
+		"test": {
+			"condition": 17,
+			"true": 6,
+			"false": 3
+		}
+	},
+	{
+		"id": 2,
+		"items": [91,78,80,97,79,88],
+		"op": "+∘3",
+		"test": {
+			"condition": 19,
+			"true": 7,
+			"false": 5
+		}
+	},
+	{
+		"id": 3,
+		"items": [64,80,83,89,59],
+		"op": "+∘5",
+		"test": {
+			"condition": 3,
+			"true": 7,
+			"false": 2
+		}
+	},
+	{
+		"id": 4,
+		"items": [98,92,99,51],
+		"op": "×⍨",
+		"test": {
+			"condition": 5,
+			"true": 0,
+			"false": 1
+		}
+	},
+	{
+		"id": 5,
+		"items": [68,57,95,85,98,75,98,75],
+		"op": "+∘2",
+		"test": {
+			"condition": 13,
+			"true": 4,
+			"false": 0
+		}
+	},
+	{
+		"id": 6,
+		"items": [74],
+		"op": "+∘4",
+		"test": {
+			"condition": 7,
+			"true": 3,
+			"false": 2
+		}
+	},
+	{
+		"id": 7,
+		"items": [68,64,60,68,87,80,82],
+		"op": "×∘19",
+		"test": {
+			"condition": 11,
+			"true": 4,
+			"false": 5
+		}
+	}
+]
